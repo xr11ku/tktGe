@@ -1,0 +1,318 @@
+header{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    position: fixed;
+    z-index: 5000;
+    .Ads{
+        width: 100%;
+        height: 50px;
+        background-image: url("/assets/images/ads/tnetAds.png");
+        background-position: center;
+        background-size: cover;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        .main_navBar{
+            width: 100%;
+            height: 60px;
+            border-bottom: 1px solid #ebedff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .burgerMenu{
+                padding-left: 20px;
+                img{
+                    width: 20px;
+                }
+            }
+            .logo{
+                width: 180px;
+                display: flex;
+                justify-content: end;
+                img{
+                    width: 100px;
+                }
+            }
+            .authorization_profile_ticket_tnet{
+                padding-right: 20px;
+                display: flex;
+                gap: 20px;
+                .authButton{
+                    button{
+                        width: 120px;
+                        height: 30px;
+                        background-color: #0f78ff;
+                        border: none;
+                        border-radius: 5px;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+                .userInformation{
+                    display: flex;
+                    .userImg{
+                        img{
+                            width: 30px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .userMenu{
+                        width: 100px;
+                        height: 150px;
+                        background-color: #ebedff;
+                        flex-direction: column;
+                        position: absolute;
+                        position: absolute;
+                        transform: translate(-80px,45px);
+                        width: 130px;
+                        height: 80px;
+                        background-color: #fff;
+                        border-radius: 5px;
+                        box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.082);
+                        display: none;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        p{
+                            height: 75px;
+                            font-size: 13px;
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+                            color: #676881;
+                            cursor: pointer;
+                        }
+                        a{
+                            height: 75px;
+                            font-size: 13px;
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+                            color: #676881;
+                            cursor: pointer;
+                        }
+                    }
+                    .userMenu_active{
+                        display: flex;
+                    }
+                }
+                .ticket_tnetLogo{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .ticket{
+                        a{
+                            font-size: 17px;
+                            color: #676881;
+                        }
+                    }
+                }
+            }
+        }
+        .routes{
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            a{
+                border-radius: 50%;
+                color: #676881;
+                font-size: 18px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .homeActive{
+                background-color: #0872fd;
+                color: white;
+            }
+            .eventActive{
+                background-color: red;
+                color: white;
+            }
+        }
+    }
+}
+.responsive_menuContainer{
+    width: 100%;
+    height: 100%;
+    // background-color: rgba(0, 0, 0, 0.212);
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.199);
+    z-index: 5001 !important;
+    .resp_menu{
+        background-color: white;
+        width: 270px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        animation-name: respMenuOpen;
+        animation-duration: 0.5s;
+        .topMenu{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .language_change{
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                p{
+                    font-size: 11px;
+                    width: 105px;
+                    height: 25px;
+                    background-color: #ebedff;
+                    border-radius: 5px;
+                    padding-left: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                }
+            }
+            .search{
+                width: 270px;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                .input{
+                    width: 240px;
+                    height: 25px;
+                    background-color: #ebedff;
+                    border-radius: 10px;
+                    input{
+                        height: 25px;
+                        width: 200px;
+                        background-color: #ebedff;
+                        padding: 0px 10px;
+                        border: none;
+                        outline: none;
+                        border-radius: 10px 0px 0px 10px;
+                    }                
+                    .searchIcon{
+                        font-size: 13px;
+                    }
+                }
+            }
+            .insideMenu_container{
+                display: flex;
+                align-items: start;
+                width: 270px;
+                
+                .insideMenu{
+                    width: 240px;
+                    height: 400px;
+                    padding-top: 40px;
+                    position: fixed;
+                    display: flex;
+                    justify-content: center;
+                    align-items: start !important;
+                    z-index: 10;
+                    .Menu{
+                        width: 200px;
+                        height: auto;
+                        padding: 20px 0px;
+                        background-color: white;
+                        border-radius: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        transform: translateY(-30px);
+                        a{
+                            padding-top: 8px;
+                            padding-bottom: 8px;
+                            padding-left: 20px;
+                            font-size: 11px;
+                            color: #676881;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+                            .rotate{
+                                rotate: 180deg;
+                            }
+                        }
+                        .PageActive{
+                            border-left: 2px solid blue;
+                            color: black;
+                        }
+                        .eventMenu{
+                            display: none;
+                            flex-direction: column;
+                            a{
+                                width: auto;
+                                padding-left: 35px;
+                            }
+                        }
+                        .eventMenuActive{
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom_menu{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            .aditonal_routes{
+                width: 230px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                a{
+                    color: black;
+                    font-size: 13px;
+                }
+            }
+            .contacts{
+                width: 100%;
+                height: 40px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                a{
+                    color: black;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .background{
+        width: 100%;
+        height: 100%;
+    }
+}
+.respMenu_Active{
+    display: flex;
+    z-index: 1;
+
+}
+
+@keyframes respMenuOpen{
+    from{
+        transform: translate(-300px,0px);
+    }
+    to{
+        transform: translate(0px,0px);
+    }
+}
+
+@keyframes respMenuClose {
+    from{
+        transform: translate(0px,0px);
+    }
+    to{
+        transform: translate(-300px,0px);
+    }
+}

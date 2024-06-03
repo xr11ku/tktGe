@@ -1,0 +1,98 @@
+<header>
+    <div class="Ads"></div>
+    <nav>
+        <div class="main_navBar">  
+            <div class="burgerMenu">
+                <img src="assets/images/Menu/burgerMenu.png" alt="" (click)="respMenuShow()">
+            </div>
+            <div class="logo">
+                <img src="assets/images/logo/tktGe.png" alt="">
+            </div>
+            <div class="authorization_profile_ticket_tnet">
+                <div class="authButton" *ngIf="_authService.isAuthorized() === false">
+                    <button>ავტორიზაცია</button>
+                </div>
+                <div class="userInformation" *ngIf="_authService.isAuthorized() === true">
+                    <div class="userImg" (click)="userMenuShow()">
+                        <img [src]="userData.avatar" alt="" >
+                    </div>
+                    <div class="userMenu" [class.userMenu_active]="userMenu">
+                        <a routerLink="profile"><i class="fa-regular fa-user"></i>პროფილი</a>
+                        <a href="/" ><i class="fa-solid fa-right-from-bracket"></i>გამოსვლა</a>
+                    </div>
+                </div>
+                <div class="ticket_tnetLogo">
+                    <div class="ticket">
+                        <a routerLink=""><i class="fa-solid fa-ticket" style="rotate: 90deg;"></i></a>
+                    </div>
+                    <div class="tnetLogo">
+                        <i class="fa-regular fa-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="routes">
+            <a routerLink="" [routerLinkActive]="'homeActive'" [routerLinkActiveOptions]="{exact:true}"><i class="fa-solid fa-house"></i></a>
+            <a routerLink="events" [routerLinkActive]="'eventActive'"><i class="fa-solid fa-ticket" style="rotate: 90deg;"></i></a>
+            <a routerLink=""><i class="fa-solid fa-clapperboard"></i></a>
+            <a routerLink="" ><i class="fa-solid fa-train-subway" ></i></a>
+            <a routerLink="" ><i class="fa-solid fa-plane"></i></a>
+            <a routerLink="" ><i class="fa-solid fa-globe"></i></a>
+        </div>
+    </nav>
+</header>
+<div class="responsive_menuContainer" [class.respMenu_Active]="respMenu">
+    <div class="resp_menu">
+        <div class="topMenu">
+            <div class="language_change">
+                <p>ქართული</p>
+                <p>English</p>
+            </div>
+            <div class="search">
+                <div class="input">
+                    <input type="text" placeholder="ძებნა..." >
+                    <i class="fa-solid fa-magnifying-glass searchIcon"></i>
+
+                </div>
+            </div>
+            <div class="insideMenu_container">
+                <div class="insideMenu">
+                    <div class="Menu">
+                        <a routerLink="" ><i class="fa-solid fa-house-chimney"></i>მთავარი</a>
+                        <a (click)="eventMenuShow()"><i class="fa-solid fa-ticket" style="rotate: 90deg;"></i>ღონისძიებები</a>
+                        <div class="eventMenu" [class.eventMenuActive]="eventMenu">
+                            <a href=""><i class="fa-solid fa-music"></i>კონცერტები</a>
+                            <a href=""><i class="fa-solid fa-heart"></i>წინანდლის ფესტივალი</a>
+                            <a href=""><i class="fa-solid fa-city"></i>ბათუმი</a>
+                            <a href=""><i class="fa-solid fa-bus"></i>ტრანსპორტი</a>
+                            <a href=""><i class="fa-solid fa-masks-theater"></i>თეატრი</a>
+                            <a href=""><i class="fa-solid fa-mask"></i>ოპერა</a>
+                            <a href=""><i class="fa-solid fa-basketball"></i>სპორტი</a>
+                            <a href=""><i class="fa-solid fa-feather-pointed"></i>სხვა</a>
+                        </div>
+                        <a href=""><i class="fa-solid fa-clapperboard"></i>კინო</a>
+                        <a href=""><i class="fa-solid fa-train"></i>რკინიგზა</a>
+                        <a href=""><i class="fa-solid fa-plane"></i>ფრენები</a>
+                        <a href=""><i class="fa-solid fa-globe"></i>საერთაშორისო</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_menu">
+            <div class="aditonal_routes">
+                <a href="">ბლოგო</a>
+                <a href="">ორგანიზაოტრებისთვის</a>
+                <a href="">ხშირად დასმული კითხვები</a>
+                <a href="">TKT Club-ის შესახებ</a>
+                <a href="">წესები და პირობები</a>
+            </div>
+            <div class="contacts">
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-messenger"></i></a>
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+                <a href=""><i class="fa-solid fa-phone"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="background" (click)="respMenuClose()"></div>
+</div>

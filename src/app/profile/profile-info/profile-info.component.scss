@@ -1,0 +1,188 @@
+*{
+    font-family: "Noto Sans Georgian", sans-serif;
+}
+.profileInfo_container{
+    width: 100%;
+    height: 350px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .left_side{
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        gap: 30px;
+        .personaInfo{
+            width: 430px;
+            height: 270px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .title{
+                display: flex;
+                p{
+                    font-weight: bold;
+                }
+                .resp_info_card{
+                    display: none;
+                }
+            }
+            .name_phoneNumber{
+                width: 80%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .email_birthday{
+                width: 80%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .titles{
+                font-size: 12px;
+                color: gray;
+            }
+            .info{
+                font-size: 14px;  
+            }
+        }
+        .tktBalance{
+            width: 430px;
+            height: 120px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+            .title{
+                height: 30px;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid rgba(128, 128, 128, 0.164);
+                a{
+                    color: blue;
+                    font-size: 13px;
+                }
+            }
+            .balance{
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .image_balance{
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                    .texts{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        span:nth-child(2){
+                            font-size: 12px;
+                            color: gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .right_side{
+        height: 100%;
+        display: flex;
+        align-items: start;
+        .tktClub{
+            width: 430px;
+            height: 190px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            .title{
+                display: flex;
+                justify-content: space-between;
+            }
+            .description{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                p{
+                    text-align: center;
+                    font-size: 14px;
+                    color: gray;
+                }
+                button{
+                    width: 80px;
+                    height: 30px;
+                    border: none;
+                    border-radius: 5px;
+                    color: blue;
+                    background-color: rgb(176, 176, 245);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1100px){
+    .profileInfo_container{
+        width: 100% !important;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .left_side{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        .personaInfo{
+            width: 90% !important;
+            .title{
+                p{
+                    display: none;
+                }
+                .resp_info_card{
+                    display: flex !important;
+                    align-items: center;
+                    gap: 20px;
+                    img{
+                        width: 70px;
+                        border-radius: 50%;
+                    }
+                    p{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .tktBalance{
+            width: 90% !important;
+            height: 100px !important;
+        }
+    }
+    .right_side{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .tktClub{
+            width: 90% !important;
+        }
+    }
+}

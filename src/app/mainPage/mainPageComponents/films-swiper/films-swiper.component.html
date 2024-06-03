@@ -1,0 +1,28 @@
+<div class="films_mainContainer">
+    <div class="title">
+        <p>კინო</p>
+    </div>
+    <swiper-container
+    navigation="false"
+    slides-per-view="4"
+    loop="false"
+    >
+        <ng-container *ngFor="let tktGeMove of tktGeMoives">
+            <swiper-slide class="swiper_slide">
+                <a href="">
+                    <div class="card">
+                        <div class="image_card">
+                            <div class="img">
+                                <img [src]="tktGeMove.desktopImage" alt="">
+                            </div>
+                        </div>
+                        <div class="card_title">
+                            <span>{{tktGeMove.name}}</span>
+                        </div>
+                    </div>
+                </a>
+            </swiper-slide>
+        </ng-container>
+    </swiper-container>
+</div>
+

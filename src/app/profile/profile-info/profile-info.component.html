@@ -1,0 +1,65 @@
+<div class="profileInfo_container">
+    <div class="left_side">
+        <div class="personaInfo">
+            <div class="title">
+                <p>პირადი ინფორმაცია</p>
+                <div class="resp_info_card">
+                    <img [src]="profileData.avatar" alt="">
+                    <p>{{profileData.name}}</p>
+                </div>
+            </div>
+            <div class="name_phoneNumber">
+                <div class="name">
+                    <p class="titles">სახელი</p>
+                    <p class="info">{{profileData.name}}</p>
+                </div>
+                <div class="phoneNumber">
+                    <p class="titles">ტელეფონის ნომერი</p>
+                    <p class="info"></p>
+                </div>
+            </div>
+            <div class="email_birthday">
+                <div class="email">
+                    <p class="titles">ელ-ფოსტა</p>
+                    <p class="info">{{profileData.email}}</p>
+                </div>
+                <div class="birthday">
+                    <p class="titles">დაბადების თარიღი</p>
+                    <p class="info"></p>
+                </div>
+            </div>
+        </div>
+        <div class="tktBalance">
+            <div class="title">
+                <p>TKT ბალანსი</p>
+                <a>გაიგე მეტი</a>
+            </div>
+            <div class="balance">
+                <div class="image_balance">
+                    <img src="assets/images/logo/tktBalancLogo.png" alt="">
+                    <div class="texts">
+                        <span>₾ 0,00</span>
+                        <span>მთლიანი ბალანსი</span>
+                    </div>
+                </div>
+                <div class="arrow">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right_side">
+        <div class="tktClub">
+            <div class="title">
+                <p>TKT კლუბი</p>
+                <p>რა არის TKT კლუბი ?</p>
+            </div>
+            <div class="description">
+                <p>TKT Club-ში გაწევრიანებისთანავე საჩუქრად დაგერიცხებათ 500 ქულა.</p>
+                <div class="button">
+                    <button>ჩართვა</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

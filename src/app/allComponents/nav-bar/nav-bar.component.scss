@@ -1,0 +1,224 @@
+header{
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    z-index: 1000;
+    .Ads{
+        width: 100%;
+        height: 50px;
+        background-image: url("/assets/images/ads/tnetAds.png");
+        background-position: center;
+        background-size: cover;
+    }
+    nav{
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .logo_search{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            .logo{
+                a{
+                    img{
+                        width: 120px;
+                    }
+                }
+                .whiteNav{
+                    display: none;
+                }
+                .blackLogo{
+                    display: none;
+                }
+                .blackNav{
+                    display: block;
+                }
+            }
+            .search{
+                width: 260px;
+                height: 30px;
+                background-color: #ebedff;
+                border-radius: 20px;
+                padding: 0px 5px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                input{
+                    width: 240px;
+                    height: 30px;
+                    border: none;
+                    border-radius: 20px;
+                    background-color: #ebedff;
+                    outline: none;
+                    padding: 0px 5px;
+                }
+                i{
+                    font-size: 10px;
+                }
+            }
+        }
+        .routes{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            a{
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: #676881;
+                font-size: 20px;
+                i{
+                    font-size: 30px ;
+                }
+                img{
+                    width: 15px;
+                }
+            }
+            a:hover{
+                background-color: #ebedff;
+            }
+            .filmsPageActive{
+                color: white;
+                i{
+                    color: white;
+                }
+            }
+            .homeActive{
+                background-color: #0872fd;
+                color: white;
+            }
+            .homeActive:hover{
+                background-color: #0872fd;
+            }
+            .EventActive{
+                background-color: red;
+                color: white;
+            }
+            .EventActive:hover{
+                background-color: red;
+            }
+        }
+        .auth_language_tnet{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .authButton{
+                button{
+                    width: 120px;
+                    height: 30px;
+                    background-color: #0f78ff;
+                    border: none;
+                    border-radius: 5px;
+                    color: white;
+                    cursor: pointer;
+                }
+                button:hover{
+                    background-color: #0872fd;
+                }
+            }
+            .userMenu{
+                display: flex;
+                flex-direction: column;
+                .UserInformation{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    cursor: pointer;
+                    .userName_Balance{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0px;
+                        p{
+                            font-size: 12px;
+                        }
+                        p:nth-child(1){
+                            transform: translateY(10px);
+                        }
+                        p:nth-child(2){
+                            color: #0872fd;
+                            text-align: center;
+                        }
+                    }
+                    .userImage{
+                        img{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .filmPageActive{
+                        color: white;
+                    }
+                }
+                .Menu{
+                    position: absolute;
+                    transform: translate(-50px,45px);
+                    width: 130px;
+                    height: 80px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.082);
+                    display: none;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    p{
+                        height: 75px;
+                        font-size: 13px;
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        color: #676881;
+                        cursor: pointer;
+                    }
+                    a{
+                        height: 75px;
+                        font-size: 13px;
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        color: #676881;
+                        cursor: pointer;
+                    }
+                }
+                .MenuActive{
+                    display: flex;
+                }
+            }
+            .ticket{
+                font-size: 20px;
+                color: #676881;
+            }
+            img{
+                width: 20px;
+            }
+        }
+    }
+    .filmsPageActive{
+        background-color: #181a33;
+    }
+}
+.auth_container{
+    width: 100%;
+    height: 1000px;
+    transform: translateY(-130px);
+    background-color: rgba(0, 0, 0, 0.308);
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.auth_container_active{
+    display: flex;
+}

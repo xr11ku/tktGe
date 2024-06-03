@@ -1,0 +1,10 @@
+<div class="upComingEvents_container">
+    <div class="title">
+        <p>მალე</p>
+    </div>
+    <div class="images">
+        <ng-container *ngFor="let tktUpComing of tktComingEvents">
+            <a href=""><img [src]="tktUpComing.horizontalImageUrl" alt=""></a>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+.events_leftSide_menu{
+    width: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-top: 210px;
+    .Menu{
+        width: 200px;
+        height: auto;
+        padding: 20px 0px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        a{
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 20px;
+            font-size: 15px;
+            color: #676881;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        a:hover{
+            background-color: #ebedff;
+        }
+
+    }
+}

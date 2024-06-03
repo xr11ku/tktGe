@@ -1,0 +1,9 @@
+<div class="pinnedEvents_mainContainer">
+    <nz-carousel nzAutoPlay>
+      <ng-container *ngFor="let pinnedEvent of tktPinnedEvents">
+          <div nz-carousel-content>
+            <img [src]="pinnedEvent.desktopImage" alt="">
+          </div>
+      </ng-container>
+      </nz-carousel>
+</div>

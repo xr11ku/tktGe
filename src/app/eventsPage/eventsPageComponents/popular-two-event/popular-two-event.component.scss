@@ -1,0 +1,12 @@
+.popular_two_image{
+    display: flex;
+    gap: 20px;
+    img{
+        width: 600px;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    img:hover{
+        transform: translateY(-10px);
+    }
+}

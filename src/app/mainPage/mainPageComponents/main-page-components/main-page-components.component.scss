@@ -1,0 +1,74 @@
+.mainPage_mainContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    .components_container{
+        width: 60%;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .pinned_carousel{
+            height: 430px;
+        }
+        .adsOne{
+            width: 100%;
+            height: 150px;
+            background-image: url("https://port80ge.adocean.pl/files/x/scc/oivikya/tjgfejenkz/fly-desktop-ka.png");
+            background-size: cover;
+            border-radius: 10px;
+        }
+        .adsTwo{
+            width: 100%;
+            height: 170px;
+            background-image: url("https://port80ge.adocean.pl/files/x/scc/oivikya/pdlsmxjuad/railway-desktop-ka.png");
+            background-size: cover;
+            border-radius: 10px;
+        }
+    }
+}
+@media screen and (max-width:1745px){
+    .mainPage_mainContainer{
+        .components_container{
+            .pinned_carousel{
+                height: 400px;
+            }
+        }
+    }
+}
+@media screen and (max-width:1450px){
+    .mainPage_mainContainer{
+        .components_container{
+            .pinned_carousel{
+                height: 380px;
+            }
+        }
+    }
+}
+@media screen and (max-width:1280px){
+    .mainPage_mainContainer{
+        .components_container{
+            .pinned_carousel{
+                height: 350px;
+            }
+        }
+    }
+}
+@media screen and (max-width:1200px){
+    .mainPage_mainContainer{
+        .components_container{
+            .pinned_carousel{
+                height: 320px;
+            }
+        }
+    }
+}
+@media screen and (max-width:1100px){
+    .mainPage_mainContainer{
+        .components_container{
+            width: 100%;
+            margin: 0;
+        }
+    }
+}

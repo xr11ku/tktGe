@@ -1,0 +1,29 @@
+<div class="main_container">
+    <div class="title_close">
+        <p>ავტორიცაზია</p>
+        <p (click)="authWindowClose()">x</p>
+    </div>
+    <div class="facebookLogin">
+        <div class="button">
+            <i class="fa-brands fa-facebook-f"></i>
+            <p>Facebook-ით შესვლა</p>
+        </div>
+    </div>
+    <div class="lines">
+        <div class="line"></div>
+        <p>ან</p>
+        <div class="line"></div>
+    </div>
+    <div class="email_password">
+        <input type="text" placeholder="ელ-ფოსტა" [(ngModel)]="email" name="email">
+        <input type="password" placeholder="პაროლი" [(ngModel)]="password" name="password">
+    </div>
+    <div class="paswordReset_loginIn">
+        <p>დაგავიწყდა პაროლი? <a href="">აღდგენა</a></p>
+        <button (click)="loginAction()">შესვლა</button>
+    </div>
+    <div class="line"></div>
+    <div class="register">
+        <p>არ გაქვთ მოხმარებული? <a href="">რეგისტრაცია</a></p>
+    </div>
+</div>

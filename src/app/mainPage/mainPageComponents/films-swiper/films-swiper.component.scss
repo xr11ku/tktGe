@@ -1,0 +1,47 @@
+*{
+    font-family: "Noto Sans Georgian", sans-serif;
+}
+.films_mainContainer{
+    width: 100%;
+    height: auto;
+    padding: 20px 30px;
+    background: url("https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F94358c4a-3e47-4365-9b83-0eb04cce591f_1824x1368.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    .title{
+        p{
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+    }
+    a{
+        .card{
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .image_card{
+                .img{
+                    img{
+                        border-radius: 10px;
+                        width: 260px;
+                        height: 140px;
+                    }
+                }
+            }
+            .card_title{
+                display: flex;
+                flex-direction: column;
+                span{
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: white;
+                }
+            }
+        }
+    }
+}

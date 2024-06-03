@@ -1,0 +1,50 @@
+<div class="concerts_mainContainer">
+    <div class="title">
+        <p>კონცერტები</p>
+    </div>
+    <swiper-container
+    navigation="false"
+    slides-per-view="4"
+    loop="false">
+        <ng-container *ngFor="let tktConcert of tktConcerts">
+            <swiper-slide class="swiper_slide">
+                <a href="">
+                    <div class="card">
+                        <div class="image_card">
+                            <div class="date_container">
+                                <div class="date">
+                                    <span>05</span>
+                                    <span>ივლ</span>
+                                </div>
+                            </div>
+                            <div class="price_container" *ngIf="tktConcert.isSoldOut === false">
+                                <div class="price">
+                                    <p>{{tktConcert.minPrice}} ₾-დან</p>
+                                </div>
+                            </div>
+                            <div class="soldOut_container" *ngIf="tktConcert.isSoldOut === true">
+                                <div class="soldOut">
+                                    <p>გაყიდულია</p>
+                                </div>
+                            </div>
+                            <div class="soldOut_container" *ngIf="tktConcert.isSoldOut === true">
+                                <div class="soldOut">
+                                    <p>გაყიდულია</p>
+                                </div>
+                            </div>
+                            <div class="img">
+                                <img src="https://static.tkt.ge/img/{{tktConcert.desktopImage}}" alt="">
+                            </div>
+                        </div>
+                        <div class="card_title">
+                            <span>{{tktConcert.venueName}}</span>
+                            <span>{{tktConcert.venueName}}</span>
+                            <span>{{tktConcert.toDate}}</span>
+                        </div>
+                    </div>
+                </a>
+            </swiper-slide>
+        </ng-container>
+    </swiper-container>
+</div>
+

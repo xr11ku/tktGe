@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-
+import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

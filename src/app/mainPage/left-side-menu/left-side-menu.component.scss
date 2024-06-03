@@ -1,0 +1,50 @@
+*{
+    font-family: "Noto Sans Georgian", sans-serif;
+}
+.leftSideMenu_container{
+    width: 23%;
+    height: auto;
+    padding-top: 40px;
+    position: fixed;
+    display: flex;
+    justify-content: end;
+    z-index: 10;
+    .Menu{
+        width: 200px;
+        height: auto;
+        padding: 20px 0px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        a{
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 20px;
+            font-size: 15px;
+            color: #676881;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        a:hover{
+            background-color: #ebedff;
+        }
+        .PageActive{
+            border-left: 2px solid blue;
+            color: black;
+        }
+        .eventMenu{
+            display: none;
+            flex-direction: column;
+            a{
+                width: auto;
+                padding-left: 35px;
+            }
+        }
+        .eventMenuActive{
+            display: flex;
+        }
+    }
+}

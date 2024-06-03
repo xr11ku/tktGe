@@ -1,0 +1,50 @@
+<header>
+    <div class="Ads"></div>
+    <nav >
+        <div class="logo_search">
+            <div class="logo">
+                <a routerLink="" ><img src="assets/images/logo/tktGe.png" alt=""></a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="ძებნა...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="routes">
+            <a routerLink="" [routerLinkActive]="'homeActive'"  ><i class="fa-solid fa-house"></i></a>
+            <a routerLink="s" [routerLinkActive]="'EventActive'" ><i class="fa-solid fa-ticket" style="rotate: 90deg;"></i></a>
+            <a routerLink="d" [routerLinkActive]="'homeActive'" ><i class="fa-solid fa-clapperboard"></i></a>
+            <a routerLink="" ><i class="fa-solid fa-train-subway" ></i></a>
+            <a routerLink="" ><i class="fa-solid fa-plane"></i></a>
+            <a routerLink="" ><i class="fa-solid fa-globe"></i></a>
+        </div>
+        <div class="auth_language_tnet">
+            <div class="authButton" *ngIf="_AuthService.isAuthorized() === false">
+                <button (click)="authWindowShow()">ავტორიზაცია</button>
+            </div>
+            <div class="userMenu" *ngIf="_AuthService.isAuthorized() === true">
+                <div class="UserInformation">
+                    <div class="userName_Balance" (click)="userMenuShow()">
+                        <p >{{profileData.name}}</p>
+                        <p>₾0</p>
+                    </div>
+                    <div class="userImage"(click)="userMenuShow()">
+                        <img [src]="profileData.avatar" alt="">
+                    </div>
+                    <div class="ticket">
+                        <i class="fa-solid fa-ticket" style="rotate: 90deg;"></i>
+                    </div>
+                </div>
+                <div class="Menu" [class.MenuActive]="userMenu">
+                    <a routerLink="profile" (click)="userMenuShow()"><i class="fa-regular fa-user"></i>პროფილი</a>
+                    <a href="/" (click)="logOut();userMenuShow()"><i class="fa-solid fa-right-from-bracket"></i>გამოსვლა</a>
+                </div>
+            </div>
+            <img src="assets/images/routes/britishLanguage.png" alt="">
+            <i class="fa-regular fa-circle"></i>
+        </div>
+    </nav>
+</header>
+<div class="auth_container" [class.auth_container_active]="authWindow">
+    <app-auth></app-auth>
+</div>

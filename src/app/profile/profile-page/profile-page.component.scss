@@ -1,0 +1,27 @@
+.info{
+    display: none;
+}
+.card{
+    display: none;
+}
+.settings{
+    display: none;
+}
+.active{
+    display: block;
+}
+.navBar{
+    display: block;
+}
+.respNavBar{
+    display: none;
+}
+
+@media screen and (max-width:1100px){
+    .navBar{
+        display: none;
+    }
+    .respNavBar{
+        display: block;
+    }
+}

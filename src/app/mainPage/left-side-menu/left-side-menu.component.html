@@ -1,0 +1,20 @@
+<div class="leftSideMenu_container">
+    <div class="Menu">
+        <a routerLink="" routerLinkActive="PageActive"><i class="fa-solid fa-house-chimney"></i>მთავარი</a>
+        <a (click)="eventMenuShow()"><i class="fa-solid fa-ticket" style="rotate: 90deg;"></i>ღონისძიებები</a>
+        <div class="eventMenu" [class.eventMenuActive]="eventMenu">
+            <a href=""><i class="fa-solid fa-music"></i>კონცერტები</a>
+            <a href=""><i class="fa-solid fa-heart"></i>წინანდლის ფესტივალი</a>
+            <a href=""><i class="fa-solid fa-city"></i>ბათუმი</a>
+            <a href=""><i class="fa-solid fa-bus"></i>ტრანსპორტი</a>
+            <a href=""><i class="fa-solid fa-masks-theater"></i>თეატრი</a>
+            <a href=""><i class="fa-solid fa-mask"></i>ოპერა</a>
+            <a href=""><i class="fa-solid fa-basketball"></i>სპორტი</a>
+            <a href=""><i class="fa-solid fa-feather-pointed"></i>სხვა</a>
+        </div>
+        <a href=""><i class="fa-solid fa-clapperboard"></i>კინო</a>
+        <a href=""><i class="fa-solid fa-train"></i>რკინიგზა</a>
+        <a href=""><i class="fa-solid fa-plane"></i>ფრენები</a>
+        <a href=""><i class="fa-solid fa-globe"></i>საერთაშორისო</a>
+    </div>
+</div>
