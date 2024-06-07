@@ -45,3 +45,37 @@
         }
     }
 }
+
+@media screen and (max-width:1870px){
+    .films_mainContainer{
+        a{
+            .card{
+                .image_card{
+                    .img{
+                        img{
+                            width: 260px;
+                            height: 140px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1850px){
+    .films_mainContainer{
+        a{
+            .card{
+                .image_card{
+                    .img{
+                        img{
+                            width: 240px;
+                            height: 120px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

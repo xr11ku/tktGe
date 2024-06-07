@@ -4,7 +4,7 @@
     </div>
     <div class="images">
         <ng-container *ngFor="let tktUpComing of tktComingEvents">
-            <a href=""><img [src]="tktUpComing.horizontalImageUrl" alt=""></a>
+            <a href="details/{{tktUpComing.itemId}}"><img [src]="tktUpComing.horizontalImageUrl" alt=""></a>
         </ng-container>
     </div>
 </div>

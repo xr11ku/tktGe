@@ -8,7 +8,7 @@
     loop="false">
         <ng-container *ngFor="let tktTopEvent of tktTopEvents">
             <swiper-slide class="swiper_slide">
-                <a href="">
+                <a href="details/{{tktTopEvent.eventId}}">
                     <div class="card">
                         <div class="image_card">
                             <div class="date_container">
@@ -39,7 +39,7 @@
                         <div class="card_title">
                             <span>{{tktTopEvent.eventName}}</span>
                             <span>{{tktTopEvent.venueName}}</span>
-                            <span>{{tktTopEvent.eventDate}}</span>
+                            <span>{{tktTopEvent.eventDate | date}}</span>
                         </div>
                     </div>
                 </a>

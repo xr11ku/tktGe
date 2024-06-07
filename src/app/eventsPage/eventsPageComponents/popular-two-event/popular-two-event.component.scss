@@ -1,8 +1,9 @@
 .popular_two_image{
+    width: 100%;
     display: flex;
     gap: 20px;
     img{
-        width: 600px;
+        width: 100%;
         border-radius: 10px;
         transition: 0.3s;
     }

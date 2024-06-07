@@ -2,8 +2,13 @@
     <nz-carousel nzAutoPlay>
       <ng-container *ngFor="let pinnedEvent of tktPinnedEvents">
           <div nz-carousel-content>
-            <img [src]="pinnedEvent.desktopImage" alt="">
+            <a href="details/{{pinnedEvent.itemId}}">
+              <img [src]="pinnedEvent.desktopImage" alt="">
+            </a>
+            <a href="details/{{pinnedEvent.itemId}}">
+              <img [src]="pinnedEvent.mobileImage" alt="">
+            </a>
           </div>
       </ng-container>
-      </nz-carousel>
+    </nz-carousel>
 </div>

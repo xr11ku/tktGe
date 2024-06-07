@@ -1,0 +1,26 @@
+<div class="details_mainContainer">
+    <div class="details_components">
+        <div class="image">
+            <img src="https://static.tkt.ge/img/{{poster}}" alt="">
+        </div>
+        <div class="details_container">
+            <div class="description">
+                <p>{{details.name}}</p>
+                <p>აღწერა</p>
+                <span [innerHTML]="details.description"></span>
+            </div>
+            <div class="date_price">
+                <div class="date_location">
+                    <p>{{event.date | date}}</p>
+                    <p>{{addres.address}}</p>
+                </div>
+                <div class="price">
+                    <p>{{price.amount}} ₾-დან</p>
+                </div>
+                <div class="buyButton">
+                    <button>ყიდვა</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

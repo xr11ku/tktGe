@@ -1,0 +1,75 @@
+.details_mainContainer{
+    width: 100%;
+    height: auto;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .details_components{
+        width: 60%;
+        height: auto;
+        background-color: white;
+        .image{
+            img{
+                width: 100%;
+            }
+        }
+        .details_container{
+            padding: 20px;
+            display: flex;
+            gap: 30px;
+            .description{
+                width: 60%;
+                border-right: 1px solid rgba(128, 128, 128, 0.301);
+                padding: 5px;
+                p:nth-child(1){
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+                p:nth-child(2){
+                    font-size: 14px;
+                }
+                span{
+                    font-size: 12px;
+                }
+            }
+            .date_price{
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 50px;
+                .date_location{
+                    p:nth-child(1){
+                        font-size: 17px;
+                        font-weight: bold;
+                        color: black;
+                    }
+                    p:nth-child(2){
+                        color: #0872fd;
+                        font-size: 12px;
+                    }
+                }
+                .price{
+                    font-size: 17px;
+                }
+                .buyButton{
+                    width: 100%;
+                    button{
+                        width: 100%;
+                        height: 40px;
+                        border: none;
+                        border-radius: 5px;
+                        color: white;
+                        background-color: #0872fd;
+                        font-size: 17px;
+                        cursor: pointer;
+                    }
+                    button:hover{
+                        background-color: #0835fd;
+                    }
+                }
+            }
+        }
+    }
+}

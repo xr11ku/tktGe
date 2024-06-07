@@ -123,3 +123,62 @@
         transform: translateY(0px);
     }
 }
+
+
+@media screen and (max-width:1870px){
+    .popularEvents_mainContainer{
+        a{
+            .card{
+                .image_card{
+                    .img{
+                        img{
+                            width: 260px;
+                            height: 130px;
+                        }
+                    }
+                    .date_container{
+                        width: 260px;
+                        height: 130px;
+                    }
+                    .price_container{
+                        width: 260px;
+                        height: 130px;
+                    }
+                    .soldOut_container{
+                        width: 260px;
+                        height: 130px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1750px){
+    .popularEvents_mainContainer{
+        a{
+            .card{
+                .image_card{
+                    .img{
+                        img{
+                            width: 240px;
+                            height: 110px;
+                        }
+                    }
+                    .date_container{
+                        width: 240px;
+                        height: 110px;
+                    }
+                    .price_container{
+                        width: 240px;
+                        height: 110px;
+                    }
+                    .soldOut_container{
+                        width: 240px;
+                        height: 110px;
+                    }
+                }
+            }
+        }
+    }
+}

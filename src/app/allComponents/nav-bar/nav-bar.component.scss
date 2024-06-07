@@ -210,14 +210,13 @@ header{
 }
 .auth_container{
     width: 100%;
-    height: 1000px;
-    transform: translateY(-130px);
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.308);
     position: fixed;
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 1001;
 }
 .auth_container_active{
     display: flex;

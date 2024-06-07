@@ -37,6 +37,9 @@ import { PopularTwoEventComponent } from './eventsPage/eventsPageComponents/popu
 import { ConcertSwiperComponent } from './eventsPage/eventsPageComponents/concert-swiper/concert-swiper.component';
 import { UpComingEventsComponent } from './eventsPage/eventsPageComponents/up-coming-events/up-coming-events.component';
 import { ConcetsPageComponent } from './eventsPage/concets-page/concets-page.component';
+import { DetailsPageComponent } from './detailsPage/details-page/details-page.component';
+import { MovieDetailsPageComponent } from './detailsPage/movie-details-page/movie-details-page.component';
+import { ShowDetailsPageComponent } from './detailsPage/show-details-page/show-details-page.component';
 
 
 registerLocaleData(en);
@@ -70,6 +73,9 @@ register();
     ConcertSwiperComponent,
     UpComingEventsComponent,
     ConcetsPageComponent,
+    DetailsPageComponent,
+    MovieDetailsPageComponent,
+    ShowDetailsPageComponent,
 
   ],
   imports: [
@@ -83,6 +89,7 @@ register();
     { provide: NZ_I18N, useValue: en_US },
     provideAnimationsAsync(),
     provideHttpClient()
+    
   ],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
