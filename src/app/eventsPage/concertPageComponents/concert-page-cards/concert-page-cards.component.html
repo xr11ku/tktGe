@@ -1,0 +1,39 @@
+<div class="concertsPageCards_MainContainer">
+    <ng-container *ngFor="let tktConcert of tktConcerts">
+        <a href="details/{{tktConcert.showId}}">
+            <div class="card">
+                <div class="image_card">
+                    <div class="date_container">
+                        <div class="date">
+                            <span>05</span>
+                            <span>ივლ</span>
+                        </div>
+                    </div>
+                    <div class="price_container" *ngIf="tktConcert.isSoldOut === false">
+                        <div class="price">
+                            <p>{{tktConcert.minPrice}} ₾-დან</p>
+                        </div>
+                    </div>
+                    <div class="soldOut_container" *ngIf="tktConcert.isSoldOut === true">
+                        <div class="soldOut">
+                            <p>გაყიდულია</p>
+                        </div>
+                    </div>
+                    <div class="soldOut_container" *ngIf="tktConcert.isSoldOut === true">
+                        <div class="soldOut">
+                            <p>გაყიდულია</p>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="https://static.tkt.ge/img/{{tktConcert.desktopImage}}" alt="">
+                    </div>
+                </div>
+                <div class="card_title">
+                    <span>{{tktConcert.venueName}}</span>
+                    <span>{{tktConcert.venueName}}</span>
+                    <span>{{tktConcert.toDate | date}}</span>
+                </div>
+            </div>
+        </a>
+    </ng-container>
+</div>

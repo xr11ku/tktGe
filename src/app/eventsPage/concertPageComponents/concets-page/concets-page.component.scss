@@ -1,0 +1,31 @@
+.concertsPage_MainContainer{
+    width: 100%;
+    height: auto;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    .title_components{
+        width: 65vw;
+    }   
+}
+
+@media screen and (max-width:1100px){
+    .concertsPage_MainContainer{
+        padding-top: 200px;
+        .leftSide_Menu{
+            display: none;
+        }
+        .title_components{
+            width: 90vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title{
+                width: 90vw;
+                display: flex;
+                justify-content: start;
+            }
+        }
+    }
+}

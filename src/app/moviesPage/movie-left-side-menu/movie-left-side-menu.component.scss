@@ -1,0 +1,77 @@
+.movieLeftSideMenu_mainContainer{
+    width: 230px;
+    height: auto;
+    background-color: #1e2140;
+    padding: 20px 0px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 150px;
+    .movie_days{
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        a{
+            font-size: 12px;
+            color: #6d729a;
+            border: 1px solid gray;
+            padding: 5px 10px;
+            border-radius: 30px;
+        }
+    }
+    .seans_time{
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.274);
+        padding-bottom: 30px;
+        .seans_title{
+            p{
+                color: #6d729a;
+                font-size: 14px;
+            }
+        }
+        .seans{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            a{
+                color: #6d729a;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                input{
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    .cinemas{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.274);
+        a{
+            height: 30px;
+            padding-left: 15px;
+            color: #6d729a;
+        }
+        .cinema_active{
+            border-left: 2px solid red;
+            color: white;
+        }
+    }
+    .categories{
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        gap: 5px;
+        a{
+            color: #6d729a;
+        }
+    }
+}

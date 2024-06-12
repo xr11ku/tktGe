@@ -26,7 +26,18 @@
                     font-size: 15px;
                     font-weight: bold;
                 }
-                p:nth-child(2){
+                .soldOut{
+                    width: 250px;
+                    height: 40px;
+                    background-color: #ffeaed;
+                    color: #ff3150;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                }
+                .description_text{
                     font-size: 14px;
                 }
                 span{
@@ -47,7 +58,7 @@
                     }
                     p:nth-child(2){
                         color: #0872fd;
-                        font-size: 12px;
+                        font-size: 15px;
                     }
                 }
                 .price{

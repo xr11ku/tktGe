@@ -9,7 +9,7 @@ import { __param } from 'tslib';
   styleUrl: './movie-details-page.component.scss'
 })
 export class MovieDetailsPageComponent {
-  details!:Data
+  details!:Event
   id !: number
   constructor(private route:ActivatedRoute , private _detailsService:DetailsPageService){
     route.params.subscribe((params) => {
@@ -17,7 +17,10 @@ export class MovieDetailsPageComponent {
     })
     _detailsService.getMovieDetails(this.id).subscribe((movieDetails) => {
       console.log(movieDetails.Data)
-      this.details = movieDetails.Data
+      movieDetails.Data.Events.find((MovieEvent) => {
+        this.details = MovieEvent
+        console.log(MovieEvent)
+      })
     })
   }
 }

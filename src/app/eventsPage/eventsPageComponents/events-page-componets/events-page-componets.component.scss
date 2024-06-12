@@ -1,14 +1,24 @@
 .eventsPageComponents_Container{
-    width: 65vw;
+    width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
-    gap: 50px;
+    justify-content: center;
+    gap: 20px;
+    .event_componetns{
+        width: 65vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
 }
 
 @media screen and (max-width:1100px){
     .eventsPageComponents_Container{
-        padding-top: 80px;
-        width: 90vw;
+        padding-top: 100px;
+        .event_componetns{
+            width: 90vw;
+        }
     }
 }
+

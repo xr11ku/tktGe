@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class EventsLeftSideMenuComponent {
 
+  event:boolean = true
+  concerts:boolean = false
+
+  eventShow(){
+    this.event = true
+    this.concerts = false
+  }
+
+  concerShow(){
+    this.event = false
+    this.concerts = true
+  }
 }

@@ -1,0 +1,38 @@
+<div class="movieLeftSideMenu_mainContainer">
+    <div class="movie_days">
+        <a href=""><i class="fa-regular fa-calendar"></i></a>
+        <a href="">დღეს</a>
+        <a href="">ხვალ</a>
+        <a href="">უქმეები</a>
+        <a href="">ივნისი</a>
+    </div>
+    <div class="seans_time">
+        <div class="seans_title">
+            <p>სეანსი</p>
+        </div>
+        <div class="seans">
+            <a href=""><input type="checkbox"> დღე(11:00 - 15:00)</a>
+            <a href=""><input type="checkbox"> საღამო (16:00 - 19:00)</a>
+            <a href=""><input type="checkbox"> ღამე (20:00 - 00:00)</a>
+        </div>
+    </div>
+    <div class="cinemas">
+        <a (click)="allCinemaShow()" [class.cinema_active]="allCinema">ყველა კინოთეატრი</a>
+        <a (click)="cinemaAmiranShow()" [class.cinema_active]="cinemaAmiran">კინოთეატრი ამირანი</a>
+        <a (click)="caveaTbilisMallShow()"  [class.cinema_active]="caveaTbilisiMall">კავეა თბილისი მოლი</a>
+        <a (click)="caveaEastPointShow()" [class.cinema_active]="caveaEastPoint">კავეა ისთ ფოინთი</a>
+        <a (click)="caveaGalleryShow()" [class.cinema_active]="caveaGallery">კავეა გალერია</a>
+        <a (click)="caveaCityMallShow()" [class.cinema_active]="caveaCityMall">კავეა სითი მოლი</a>
+        <a (click)="apoloBatumiShow()" [class.cinema_active]="apoloBatuimi">აპოლო ბათუმი</a>
+    </div>
+    <div class="categories">
+        <a href=""><input type="checkbox"> IMAX</a>
+        <a href=""><input type="checkbox"> 3D</a>
+        <a href=""><input type="checkbox"> 2D</a>
+        <a href=""><input type="checkbox"> საბავშვო</a>
+        <a href=""><input type="checkbox"> ქართული</a>
+        <a href=""><input type="checkbox"> ინგლისური</a>
+        <a href=""><input type="checkbox"> სუბტიტრები</a>
+        <a href=""><input type="checkbox"> ScreenX</a>
+    </div>
+</div>

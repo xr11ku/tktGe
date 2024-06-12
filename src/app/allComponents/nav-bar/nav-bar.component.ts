@@ -13,7 +13,6 @@ export class NavBarComponent {
   userMenu:boolean = false;
   constructor(private _authService:AuthServiceService , public _AuthService:AuthServiceService){
     this._authService.getProfile().subscribe((data) => {
-      console.log(data)
       this.profileData = data
     })
   }

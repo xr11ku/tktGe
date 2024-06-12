@@ -1,0 +1,11 @@
+<div class="title">
+    <p>მიმდინარე ფილმები</p>
+</div>
+<div class="currentMovies_mainContainer">
+    <ng-container *ngFor="let currentMovie of currentMovies">
+        <a>
+            <img [src]="currentMoviesPosters.FileName"  alt="">
+            <p>{{currentMovie.Name}}</p>
+        </a>
+    </ng-container>
+</div>

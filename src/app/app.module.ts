@@ -36,10 +36,16 @@ import { EventsPageComponetsComponent } from './eventsPage/eventsPageComponents/
 import { PopularTwoEventComponent } from './eventsPage/eventsPageComponents/popular-two-event/popular-two-event.component';
 import { ConcertSwiperComponent } from './eventsPage/eventsPageComponents/concert-swiper/concert-swiper.component';
 import { UpComingEventsComponent } from './eventsPage/eventsPageComponents/up-coming-events/up-coming-events.component';
-import { ConcetsPageComponent } from './eventsPage/concets-page/concets-page.component';
+import { ConcetsPageComponent } from './eventsPage/concertPageComponents/concets-page/concets-page.component';
 import { DetailsPageComponent } from './detailsPage/details-page/details-page.component';
 import { MovieDetailsPageComponent } from './detailsPage/movie-details-page/movie-details-page.component';
 import { ShowDetailsPageComponent } from './detailsPage/show-details-page/show-details-page.component';
+import { MoviesPageComponent } from './moviesPage/movies-page/movies-page.component';
+import { MovieLeftSideMenuComponent } from './moviesPage/movie-left-side-menu/movie-left-side-menu.component';
+import { MovieMainPageComponent } from './moviesPage/movie-main-page/movie-main-page.component';
+import { MovieMainPageFirstimagesComponent } from './moviesPage/movieMainPage-components/movie-main-page-firstimages/movie-main-page-firstimages.component';
+import { CurrentMoviesComponent } from './moviesPage/movieMainPage-components/current-movies/current-movies.component';
+import { ConcertPageCardsComponent } from './eventsPage/concertPageComponents/concert-page-cards/concert-page-cards.component';
 
 
 registerLocaleData(en);
@@ -76,6 +82,12 @@ register();
     DetailsPageComponent,
     MovieDetailsPageComponent,
     ShowDetailsPageComponent,
+    MoviesPageComponent,
+    MovieLeftSideMenuComponent,
+    MovieMainPageComponent,
+    MovieMainPageFirstimagesComponent,
+    CurrentMoviesComponent,
+    ConcertPageCardsComponent,
 
   ],
   imports: [

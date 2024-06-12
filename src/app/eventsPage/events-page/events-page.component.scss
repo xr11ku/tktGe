@@ -1,13 +1,13 @@
 .eventPage_components_container{
     width: 100%;
-    padding-top: 150px;
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding-top: 150px;
 }
 
 @media screen and (max-width:1100px){
-    .leftSideMenu{
+    .left_sideMenu{
         display: none;
     }
 }
