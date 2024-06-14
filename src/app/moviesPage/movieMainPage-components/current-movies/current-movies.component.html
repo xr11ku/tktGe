@@ -4,7 +4,7 @@
 <div class="currentMovies_mainContainer">
     <ng-container *ngFor="let currentMovie of currentMovies">
         <a>
-            <img [src]="currentMoviesPosters.FileName"  alt="">
+            <img [src]="currentMovie.Posters[0].FileName"  alt="">
             <p>{{currentMovie.Name}}</p>
         </a>
     </ng-container>

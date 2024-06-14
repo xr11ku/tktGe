@@ -8,13 +8,11 @@ import { IMovie ,IPoster } from '../../../interfaces/movieMainPage.model';
 })
 export class MovieMainPageFirstimagesComponent {
 
-  twoImage!:IPoster[]
+  twoImage!:IMovie[]
 
   constructor(private _moviePageServices:MovieMainPageService){
    _moviePageServices.getTwoImage().subscribe((twoImage) => {
-    twoImage.Data.Movies.find((image) => {
-      this.twoImage = image.Posters
-    })
+    this.twoImage = twoImage.Data.Movies
    })
   }
 }

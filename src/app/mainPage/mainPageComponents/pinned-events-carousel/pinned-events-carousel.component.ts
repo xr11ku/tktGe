@@ -12,7 +12,6 @@ export class PinnedEventsCarouselComponent {
   tktPinnedEvents:IBanner[] = []
   constructor(private _tktPinnedService:TktgePinnedeventsService){
     this._tktPinnedService.getPinnedApi().subscribe((data) => {
-      console.log(data)
       this.tktPinnedEvents = data.data.banners
     })
   }

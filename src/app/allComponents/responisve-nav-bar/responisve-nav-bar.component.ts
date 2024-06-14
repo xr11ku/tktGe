@@ -14,6 +14,7 @@ export class ResponisveNavBarComponent {
   eventMenu:boolean = true;
   userData !:IsignIn
   userMenu:boolean = false
+  authWindow:boolean = false
   respMenuShow(){
     this.respMenu = true
   }
@@ -33,5 +34,5 @@ export class ResponisveNavBarComponent {
       this.userData = data
     })
   }
-
+  
 }
