@@ -13,7 +13,19 @@
     padding-top: 100px;
     justify-content: center;
 }
-
+.auth_window{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.329);
+    z-index: 100000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.authWindow_active{
+    display: flex;
+}
 @media screen and (max-width:1100px){
     .navBar{
         display: none;

@@ -1,5 +1,25 @@
 <div class="movieMainPage_firstImages_mainContainer">
-    <ng-container *ngFor="let twoImage of twoImage">
-        <img src="https://static.tkt.ge/img/{{twoImage.Posters[0].FileName}}" alt="">
-    </ng-container>
+    <div class="desktopViwe">
+        <ng-container *ngFor="let twoImage of twoImage">
+            <div class="images">
+                <img src="https://static.tkt.ge/img/{{twoImage.Posters[0].FileName}}" alt="">
+            </div>
+        </ng-container>
+    </div>
+    <div class="mobileViwe">
+        <swiper-container
+        navigation="false"
+        slides-per-view="1"
+        loop="false"
+        pagination="true"
+        >
+        <ng-container *ngFor="let twoImage of twoImage">
+            <swiper-slide>
+                <a href="">
+                    <img src="https://static.tkt.ge/img/{{twoImage.Posters[0].FileName}}" alt="">
+                </a>
+            </swiper-slide>
+        </ng-container>
+        </swiper-container>
+    </div>
 </div>

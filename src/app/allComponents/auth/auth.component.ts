@@ -1,5 +1,4 @@
-import { Component , OnInit} from '@angular/core';
-import { NavBarComponent } from '../nav-bar/nav-bar.component';
+import { Component , EventEmitter, OnInit, Output} from '@angular/core';
 import { AuthServiceService } from '../../services/auth-service.service';
 @Component({
   selector: 'app-auth',
@@ -11,14 +10,16 @@ export class AuthComponent {
   email!: string
   password!: string
 
+  @Output() authWindow = new EventEmitter<boolean>();
+  @Output() respAuthWindow = new EventEmitter<boolean>();
 
-  constructor(private navBar:NavBarComponent , private _AuthService:AuthServiceService){
+  constructor(private _AuthService:AuthServiceService){
   }
 
-  authWindowClose(){
-    this.navBar.authWindow = false
+  authWindowClose(Close:boolean){
+    this.authWindow.emit(Close)
+    this.respAuthWindow.emit(Close)
   }
-
   loginAction(){
     this._AuthService.loginIn(this.email,this.password).subscribe((data) => {
       localStorage.setItem("token",data.access_token);
@@ -28,7 +29,7 @@ export class AuthComponent {
 
   authWindowClosIsAuthTrue() {
     if(this._AuthService.isAuthorized()){
-      this.navBar.authWindow = false
+      this.authWindowClose(false)
     }
   }
 

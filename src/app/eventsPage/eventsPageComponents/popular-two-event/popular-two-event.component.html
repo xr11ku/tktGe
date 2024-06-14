@@ -1,7 +1,25 @@
 <div class="popular_two_image">
-    <ng-container *ngFor="let tktImage of pinnedImages">
-        <a href="details/{{tktImage.itemId}}">
-            <img [src]="tktImage.mobileImage" alt="">
-        </a>
-    </ng-container>
+    <div class="desktopViwe">
+        <ng-container *ngFor="let tktImage of pinnedImages">
+            <a href="details/{{tktImage.itemId}}">
+                <img [src]="tktImage.mobileImage" alt="">
+            </a>
+        </ng-container>
+    </div>
+    <div class="mobileViwe">
+        <swiper-container
+        navigation="false"
+        slides-per-view="1"
+        loop="false"
+        pagination="true"
+        >
+        <ng-container *ngFor="let twoImage of pinnedImages ">
+            <swiper-slide>
+                <a href="">
+                    <img [src]="twoImage.mobileImage" alt="">
+                </a>
+            </swiper-slide>
+        </ng-container>
+        </swiper-container>
+    </div>
 </div>

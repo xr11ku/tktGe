@@ -4,3 +4,10 @@
     flex-direction: column;
     gap: 30px;
 }
+
+@media screen and (max-width:1100px){
+    .movieMainPage_components_mainContainer{
+        width: 90vw;
+        padding-top: 50px;
+    }
+}

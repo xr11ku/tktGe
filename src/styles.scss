@@ -9,3 +9,6 @@
 body{
     background-color: #f5f6ff;
 }
+body::-webkit-scrollbar{
+    display: none;
+}

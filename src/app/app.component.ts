@@ -8,8 +8,13 @@ import { Router , NavigationEnd } from '@angular/router';
 export class AppComponent {
   title = 'tktGE';
 
-  constructor(public router:Router){}
-  ngOnInit(){
+  authWindowShow:boolean = false
 
+  authWindowOpen(Open:boolean){
+    this.authWindowShow = Open
+  }
+
+  authWindowClose(){
+    this.authWindowShow = false
   }
 }

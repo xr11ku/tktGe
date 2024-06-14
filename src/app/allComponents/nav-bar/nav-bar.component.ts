@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component , OnInit ,OnDestroy, EventEmitter, Input  } from '@angular/core';
+import { Router , NavigationEnd } from '@angular/router';
 import { AuthServiceService } from '../../services/auth-service.service';
 import { TopEventsService } from '../../services/top-events.service';
 import { SearchService } from '../../services/search.service';
-import { IDatum , IRootTktTop } from '../../interfaces/tktTopEvents.model';
-import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+import { IDatum , IRootTktTop } from '../../interfaces/tktTopEvents.model';;
 import { IsignIn } from '../../interfaces/signin.model';
 import { IDataSearch , IitemSearh} from '../../interfaces/search.model';
+import { Subscription } from 'rxjs';
+import { Output } from '@angular/core';
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -22,7 +24,21 @@ export class NavBarComponent {
   eventSearch!:string
   searchResults: IitemSearh[] = [];
 
-  constructor(private _authService:AuthServiceService , public _AuthService:AuthServiceService , private _popularService:TopEventsService , private _searchService:SearchService ){
+  filmsPageActive:boolean = false;
+  private routerSubscription!: Subscription;
+
+  @Output() authWindowOpen = new EventEmitter<boolean>()
+  
+
+  authWindowOpens(Open:boolean){
+    this.authWindowOpen.emit(Open)
+  }
+
+
+  constructor(private _authService:AuthServiceService , public _AuthService:AuthServiceService , private _popularService:TopEventsService , private _searchService:SearchService , private route:Router){
+    
+    this.filmsPageClickActive()
+    
     this._authService.getProfile().subscribe((data) => {
       this.profileData = data
     })
@@ -36,11 +52,17 @@ export class NavBarComponent {
     this._searchService.getSearchItems(this.eventSearch).subscribe((searchedItem) => {
       this.searchResults = searchedItem.Data.Items;
     })
+
+    this.routerSubscription = this.route.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.filmsPageClickActive();
+      }
+    });
   }
 
-  authWindowShow(){
-    this.authWindow = true
-  }
+  // authWindowShow(){
+  //   this.authWindow = true
+  // }
 
   logOut(){
     this._authService.logOut()
@@ -48,6 +70,14 @@ export class NavBarComponent {
   
   userMenuShow(){
     this.userMenu =! this.userMenu
+  }
+
+  ngOnDestroy() {
+    this.routerSubscription.unsubscribe();
+  }
+
+  filmsPageClickActive() {
+    this.filmsPageActive = this.route.url === '/moviePage';
   }
 
 }

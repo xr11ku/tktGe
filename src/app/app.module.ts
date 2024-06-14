@@ -46,6 +46,7 @@ import { MovieMainPageComponent } from './moviesPage/movie-main-page/movie-main-
 import { MovieMainPageFirstimagesComponent } from './moviesPage/movieMainPage-components/movie-main-page-firstimages/movie-main-page-firstimages.component';
 import { CurrentMoviesComponent } from './moviesPage/movieMainPage-components/current-movies/current-movies.component';
 import { ConcertPageCardsComponent } from './eventsPage/concertPageComponents/concert-page-cards/concert-page-cards.component';
+import { RespAuthComponent } from './allComponents/resp-auth/resp-auth.component';
 
 
 registerLocaleData(en);
@@ -88,6 +89,7 @@ register();
     MovieMainPageFirstimagesComponent,
     CurrentMoviesComponent,
     ConcertPageCardsComponent,
+    RespAuthComponent,
 
   ],
   imports: [

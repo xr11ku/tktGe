@@ -1,3 +1,6 @@
-<app-nav-bar class="navBar" ></app-nav-bar>
-<app-responisve-nav-bar class="resp_navBar"></app-responisve-nav-bar>
+<div class="auth_window" [class.authWindow_active]="authWindowShow">
+    <app-auth (authWindow)="authWindowOpen($event)"></app-auth>
+</div>
+<app-nav-bar class="navBar" (authWindowOpen)="authWindowOpen($event)"></app-nav-bar>
+<app-responisve-nav-bar class="resp_navBar" (authWindowOpen)="authWindowOpen($event)"></app-responisve-nav-bar>
 <router-outlet></router-outlet>

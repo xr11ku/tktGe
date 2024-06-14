@@ -2,9 +2,25 @@
     <div class="title">
         <p>მალე</p>
     </div>
-    <div class="images">
+    <div class="desktopViwe">
         <ng-container *ngFor="let tktUpComing of tktComingEvents">
             <a href="details/{{tktUpComing.itemId}}"><img [src]="tktUpComing.horizontalImageUrl" alt=""></a>
         </ng-container>
+    </div>
+    <div class="mobileViwe">
+        <swiper-container
+        navigation="false"
+        slides-per-view="1"
+        loop="false"
+        pagination="true"
+        >
+        <ng-container *ngFor="let twoImage of tktComingEvents">
+            <swiper-slide>
+                <a href="">
+                    <img [src]="twoImage.horizontalImageUrl" alt="">
+                </a>
+            </swiper-slide>
+        </ng-container>
+        </swiper-container>
     </div>
 </div>

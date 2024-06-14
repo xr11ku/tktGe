@@ -76,28 +76,30 @@ header{
                             flex-direction: column;
                             gap: 10px;
                             padding-bottom: 15px;
-                            .cards{
-                                display: flex;
-                                gap: 10px;
-                                .image{
-                                    img{
-                                        width: 120px;
-                                        border-radius: 5px;
-                                    }
-                                }
-                                .texts{
+                            a{
+                                .cards{
                                     display: flex;
-                                    flex-direction: column;
-                                    justify-content: space-between;
-                                    span:nth-child(1){
-                                        font-size: 12px;
+                                    gap: 10px;
+                                    .image{
+                                        img{
+                                            width: 120px;
+                                            border-radius: 5px;
+                                        }
+                                    }
+                                    .texts{
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: space-between;
                                         color: black;
-                                    }
-                                    span:nth-child(2){
-                                        font-size: 9px;
-                                    }
-                                    span:nth-child(3){
-                                        font-size: 10px;
+                                        span:nth-child(1){
+                                            font-size: 12px;
+                                        }
+                                        span:nth-child(2){
+                                            font-size: 9px;
+                                        }
+                                        span:nth-child(3){
+                                            font-size: 10px;
+                                        }
                                     }
                                 }
                             }
@@ -109,6 +111,39 @@ header{
                 }
                 .search:focus-within + .searchedEvents {
                     display: flex;
+                }
+            }
+            .searchContainerFilmsPage{
+                .search{
+                    background-color: #2b2f59;
+                    input{
+                        background-color: #2b2f59;
+                        color: white;
+                    }
+                    .searchIcon{
+                        color: white;
+                    }
+                }
+                .searchedEvents{
+                    background-color: #181a33;
+                    .popularEvents{
+                        .title{
+                            p{
+                                color: white;
+                            }
+                        }
+                        .events{
+                            a{
+                                .cards{
+                                    .texts{
+                                        span{
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -156,6 +191,11 @@ header{
                 background-color: red;
             }
         }
+        .routesFilmsPage{
+            a{
+                color: #ccd0e9;
+            }
+        }
         .auth_language_tnet{
             display: flex;
             align-items: center;
@@ -196,6 +236,9 @@ header{
                             color: #0872fd;
                             text-align: center;
                         }
+                        .name{
+                            color: white
+                        }
                     }
                     .userImage{
                         img{
@@ -210,7 +253,7 @@ header{
                 }
                 .Menu{
                     position: absolute;
-                    transform: translate(-50px,45px);
+                    transform: translate(-50px,60px);
                     width: 130px;
                     height: 80px;
                     background-color: #fff;
@@ -251,6 +294,29 @@ header{
                 width: 20px;
             }
         }
+        .userFilmsPage{
+            .userMenu{
+                .UserInformation{
+                    .userName_Balance{
+                        p:nth-child(1){
+                            color: white;
+                        }
+                    }
+                }
+                .Menu{
+                    background-color: #2b2f59;
+                    box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.479);
+                    a{
+                        color: white;
+                    }
+                }
+            }
+            .ticket{
+                .tkt{
+                    color: white;
+                }
+            }
+        }
     }
     .filmsPageActive{
         background-color: #181a33;
@@ -268,4 +334,7 @@ header{
 }
 .auth_container_active{
     display: flex;
+}
+.bg{
+    background-color: #181a33;
 }

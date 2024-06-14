@@ -1,4 +1,4 @@
-<header>
+<header [class.filmsPageActive]="filmsPageActive">
     <div class="Ads"></div>
     <nav>
         <div class="main_navBar">  
@@ -6,11 +6,13 @@
                 <img src="assets/images/Menu/burgerMenu.png" alt="" (click)="respMenuShow()">
             </div>
             <div class="logo">
-                <img src="assets/images/logo/tktGe.png" alt="">
+                <img src="assets/images/logo/tktGe.png" alt="" *ngIf="filmsPageActive === false">
+                <img src="assets/images/logo/tktGeBlack.png" alt="" *ngIf="filmsPageActive === true">
             </div>
             <div class="authorization_profile_ticket_tnet">
                 <div class="authButton" *ngIf="_authService.isAuthorized() === false">
-                    <button>ავტორიზაცია</button>
+                    <button (click)="authWindowOpens(true)">ავტორიზაცია</button>
+                    <p (click)="authWindowOpens(true)"><i class="fa-regular fa-user user"></i></p>
                 </div>
                 <div class="userInformation" *ngIf="_authService.isAuthorized() === true">
                     <div class="userImg" (click)="userMenuShow()">
@@ -18,11 +20,11 @@
                     </div>
                     <div class="userMenu" [class.userMenu_active]="userMenu">
                         <a routerLink="profile"><i class="fa-regular fa-user"></i>პროფილი</a>
-                        <a href="/" ><i class="fa-solid fa-right-from-bracket"></i>გამოსვლა</a>
+                        <a href="/" (click)="logOut()"><i class="fa-solid fa-right-from-bracket"></i>გამოსვლა</a>
                     </div>
                 </div>
                 <div class="ticket_tnetLogo">
-                    <div class="ticket">
+                    <div class="ticket" *ngIf="_authService.isAuthorized() === true">
                         <a routerLink=""><i class="fa-solid fa-ticket" style="rotate: 90deg;"></i></a>
                     </div>
                     <div class="tnetLogo">
@@ -34,14 +36,14 @@
         <div class="routes">
             <a routerLink="" [routerLinkActive]="'homeActive'" [routerLinkActiveOptions]="{exact:true}"><i class="fa-solid fa-house"></i></a>
             <a routerLink="events" [routerLinkActive]="'eventActive'"><i class="fa-solid fa-ticket" style="rotate: 90deg;"></i></a>
-            <a routerLink=""><i class="fa-solid fa-clapperboard"></i></a>
+            <a routerLink="moviePage" [routerLinkActive]="'homeActive'"><i class="fa-solid fa-clapperboard"></i></a>
             <a routerLink="" ><i class="fa-solid fa-train-subway" ></i></a>
             <a routerLink="" ><i class="fa-solid fa-plane"></i></a>
             <a routerLink="" ><i class="fa-solid fa-globe"></i></a>
         </div>
     </nav>
 </header>
-<div class="responsive_menuContainer" [class.respMenu_Active]="respMenu">
+<div class="responsive_menuContainer" [class.respMenu_Active]="respMenu" [class.filmsPageRespMenu]="filmsPageActive">
     <div class="resp_menu">
         <div class="topMenu">
             <div class="language_change">
@@ -52,7 +54,6 @@
                 <div class="input">
                     <input type="text" placeholder="ძებნა..." >
                     <i class="fa-solid fa-magnifying-glass searchIcon"></i>
-
                 </div>
             </div>
             <div class="insideMenu_container">
@@ -70,7 +71,7 @@
                             <a href=""><i class="fa-solid fa-basketball"></i>სპორტი</a>
                             <a href=""><i class="fa-solid fa-feather-pointed"></i>სხვა</a>
                         </div>
-                        <a href=""><i class="fa-solid fa-clapperboard"></i>კინო</a>
+                        <a routerLink="moviePage"><i class="fa-solid fa-clapperboard"></i>კინო</a>
                         <a href=""><i class="fa-solid fa-train"></i>რკინიგზა</a>
                         <a href=""><i class="fa-solid fa-plane"></i>ფრენები</a>
                         <a href=""><i class="fa-solid fa-globe"></i>საერთაშორისო</a>

@@ -12,7 +12,12 @@ export class MovieMainPageFirstimagesComponent {
 
   constructor(private _moviePageServices:MovieMainPageService){
    _moviePageServices.getTwoImage().subscribe((twoImage) => {
-    this.twoImage = twoImage.Data.Movies
+    if(twoImage.Data.Movies.length >= 2){
+      this.twoImage = twoImage.Data.Movies.slice(0,2)
+    }
+    else{
+      this.twoImage = twoImage.Data.Movies
+    }
    })
   }
 }
