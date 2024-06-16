@@ -5,7 +5,7 @@ import { TopEventsService } from '../../services/top-events.service';
 import { SearchService } from '../../services/search.service';
 import { IDatum , IRootTktTop } from '../../interfaces/tktTopEvents.model';;
 import { IsignIn } from '../../interfaces/signin.model';
-import { IDataSearch , IitemSearh} from '../../interfaces/search.model';
+import {  IitemSearh} from '../../interfaces/search.model';
 import { Subscription } from 'rxjs';
 import { Output } from '@angular/core';
 @Component({
@@ -21,8 +21,8 @@ export class NavBarComponent {
 
   popularEvents!:IDatum[]
 
-  eventSearch!:string
-  searchResults: IitemSearh[] = [];
+  eventSearch:string = '';
+  searchResults!:IitemSearh[]
 
   filmsPageActive:boolean = false;
   private routerSubscription!: Subscription;
@@ -42,17 +42,14 @@ export class NavBarComponent {
     this._authService.getProfile().subscribe((data) => {
       this.profileData = data
     })
-
     this._popularService.getTopEvents().subscribe((popularEvents: IRootTktTop) => {
       this.popularEvents = popularEvents.data.length >= 4 
         ? popularEvents.data.slice(0, 4) 
         : popularEvents.data;
     })
-
-    this._searchService.getSearchItems(this.eventSearch).subscribe((searchedItem) => {
-      this.searchResults = searchedItem.Data.Items;
+    this._searchService.getSearchItems("rag").subscribe((data) => {
+      console.log(data)
     })
-
     this.routerSubscription = this.route.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.filmsPageClickActive();
@@ -60,10 +57,12 @@ export class NavBarComponent {
     });
   }
 
-  // authWindowShow(){
-  //   this.authWindow = true
-  // }
 
+  search(){
+    this._searchService.getSearchItems(this.eventSearch).subscribe((searchedItem) => {
+      this.searchResults = searchedItem.Data.Items;
+    })
+  }
   logOut(){
     this._authService.logOut()
   }

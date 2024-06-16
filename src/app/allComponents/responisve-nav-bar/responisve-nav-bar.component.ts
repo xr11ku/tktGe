@@ -1,10 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { NavBarComponent } from '../nav-bar/nav-bar.component';
-import { FooterComponent } from '../footer/footer.component';
 import { AuthServiceService } from '../../services/auth-service.service';
 import { IsignIn } from '../../interfaces/signin.model';
 import { Subscription } from 'rxjs';
-import { Route, Router , NavigationEnd } from '@angular/router';
+import { Router , NavigationEnd } from '@angular/router';
 @Component({
   selector: 'app-responisve-nav-bar',
   templateUrl: './responisve-nav-bar.component.html',

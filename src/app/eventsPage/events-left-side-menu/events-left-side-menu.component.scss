@@ -1,9 +1,11 @@
 .events_leftSide_menu{
     width: 200px;
+    height: auto;
+    position: sticky;
+    top: 140px;
     display: flex;
-    align-items: center;
-    justify-content: end;
-    padding-top: 210px;
+    align-items: start;
+    justify-content: start;
     .Menu{
         width: 200px;
         height: auto;
@@ -12,7 +14,6 @@
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        position: fixed;
         a{
             padding-top: 8px;
             padding-bottom: 8px;

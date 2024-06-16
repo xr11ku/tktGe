@@ -9,12 +9,14 @@
             <div class="search_container" [class.searchContainerFilmsPage]="filmsPageActive">
                 <div class="search" >
                     <input  type="search" placeholder="ძებნა..." [(ngModel)]="eventSearch" name="eventSearch">
-                    <i class="fa-solid fa-magnifying-glass searchIcon" ></i>
+                    <i class="fa-solid fa-magnifying-glass searchIcon" (click)="search()" style="cursor: pointer;"></i>
                 </div>
                 <div class="searchedEvents">
-                    <div class="searchedEvents">
+                    <div class="searchedEvents_container">
                         <ng-container *ngFor="let serchedResult of searchResults">
-                            <p>{{serchedResult.CategoryName}}</p>
+                            <div class="searchedCards">
+                                <img [src]="serchedResult.Poster" alt="">
+                            </div>
                         </ng-container>
                     </div>
                     <div class="popularEvents">

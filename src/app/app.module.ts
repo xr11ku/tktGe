@@ -15,7 +15,6 @@ import { MainPageComponent } from './mainPage/main-page/main-page.component';
 import { ProfileNavigationComponent } from './profile/profile-navigation/profile-navigation.component';
 import { CardsComponent } from './profile/cards/cards.component';
 import { LeftSideMenuComponent } from './mainPage/left-side-menu/left-side-menu.component';
-import { BlackNavBarComponent } from './allComponents/black-nav-bar/black-nav-bar.component';
 import { MainPageComponentsComponent } from './mainPage/mainPageComponents/main-page-components/main-page-components.component';
 import { ResponisveNavBarComponent } from './allComponents/responisve-nav-bar/responisve-nav-bar.component';
 import { register } from 'swiper/element/bundle';
@@ -46,7 +45,6 @@ import { MovieMainPageComponent } from './moviesPage/movie-main-page/movie-main-
 import { MovieMainPageFirstimagesComponent } from './moviesPage/movieMainPage-components/movie-main-page-firstimages/movie-main-page-firstimages.component';
 import { CurrentMoviesComponent } from './moviesPage/movieMainPage-components/current-movies/current-movies.component';
 import { ConcertPageCardsComponent } from './eventsPage/concertPageComponents/concert-page-cards/concert-page-cards.component';
-import { RespAuthComponent } from './allComponents/resp-auth/resp-auth.component';
 
 
 registerLocaleData(en);
@@ -65,7 +63,6 @@ register();
     ProfileNavigationComponent,
     CardsComponent,
     LeftSideMenuComponent,
-    BlackNavBarComponent,
     MainPageComponentsComponent,
     ResponisveNavBarComponent,
     PinnedEventsCarouselComponent,
@@ -89,8 +86,6 @@ register();
     MovieMainPageFirstimagesComponent,
     CurrentMoviesComponent,
     ConcertPageCardsComponent,
-    RespAuthComponent,
-
   ],
   imports: [
     BrowserModule,

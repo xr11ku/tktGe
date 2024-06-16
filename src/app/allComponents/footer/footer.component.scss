@@ -1,0 +1,161 @@
+.footer_container{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .top_footer_components{
+        width: 100%;
+        height: 100px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.493) ;
+        padding-left: 100px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        .download_icons{
+            display: flex;
+            gap: 10px;
+        }
+        .top_footer_text{
+            width: 300px;
+
+        }
+    }
+    .middel_footer_components{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .navigations{
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            .title{
+                p{
+                    font-size: 17px;
+                    color: black;
+                    font-weight: bold;
+                }
+                .arrow{
+                    display: none;
+                }
+            }
+            .routes{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                a{
+                    color: gray;
+                    font-size: 15px;
+                }
+                a:hover{
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1335px){
+    .footer_container{
+        .top_footer_components{
+            padding: 20px;
+            border: none;
+            .download_icons{
+                padding: 0;
+            }
+        }
+        .middel_footer_components{
+            width: 100%;
+            height: auto;
+            padding-left: 20px;
+            padding-top: 20px;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+            .navigations{
+                width: 100%;
+                .title{
+                    width: 100%;
+                    border-top: 1px solid rgba(128, 128, 128, 0.185);
+                    padding-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    p{
+                        font-size: 18px;
+                    }
+                    .arrow{
+                        font-size: 18px;
+                        display: flex;
+                    }
+                    .arrowRotate{
+                        rotate: 90deg;
+                    }
+                }
+                .routes{
+                    display: none;
+                    a{
+                        font-size: 14px;
+                    }
+                }
+                .routes_active{
+                    display: flex;
+                }
+            }
+        }
+
+    }
+    .filmsPage_active{
+        .middel_footer_components{
+            .navigations{
+                .title{
+                    border-top: 1px solid white;
+                }
+            }
+        }
+    }
+}
+
+.filmsPage_active{
+    background-color: #181a33;
+    .top_footer_components{
+        .top_footer_text{
+            p{
+                color: white;
+            }
+        }
+    }
+    .middel_footer_components{
+        .navigations{
+            .title{
+                p{
+                    color: white;
+                }
+                .arrow{
+                    color: white;
+                }
+            }
+            .routes{
+                a{
+                    color: rgb(180, 180, 180);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:501px){
+    .footer_container{
+        .top_footer_components{
+            .top_footer_text{
+                p{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

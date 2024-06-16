@@ -1,1 +1,95 @@
-<p>footer works!</p>
+<div class="footer_container" [class.filmsPage_active]="filmsPageActive">
+    <div class="top_footer_components">
+        <div class="download_icons" *ngIf="filmsPageActive === false">
+            <img src="assets/images/downloadicons/playStore.png" alt="">
+            <img src="assets/images/downloadicons/appStore.png" alt="">
+        </div>
+        <div class="download_icons" *ngIf="filmsPageActive === true">
+            <img src="assets/images/downloadicons/playStoreBlack.png" alt="">
+            <img src="assets/images/downloadicons/appStoreBlack.png" alt="">
+        </div>
+        <div class="top_footer_text">
+            <p>გადმოწერე აპლიკაცია და მიიღე მუდმივად განახლებული ინფორმაცია მარტივად</p>
+        </div>
+    </div>
+    <div class="middel_footer_components">
+        <div class="navigations">
+            <div class="title" (click)="navigationOpen()">
+                <p>ნავიგაცია</p>
+                <i class="fa-solid fa-chevron-down arrow" [class.arrowRotate]="navigation"></i>
+            </div>
+            <div class="routes" [class.routes_active]="navigation">
+                <a href="">ღონისძიებები</a>
+                <a href="">კინო</a>
+                <a href="">ტრანსპორტი</a>
+                <a href="">მატარებელი</a>
+                <a href="">ფრენა</a>
+            </div>
+        </div>
+        <div class="navigations">
+            <div class="title" (click)="supportOpen()">
+                <p>დახმარება</p>
+                <i class="fa-solid fa-chevron-down arrow" [class.arrowRotate]="suppoort"></i>
+            </div>
+            <div class="routes" [class.routes_active]="suppoort">
+                <a href="">ონლაინ დახმარება</a>
+                <a href="">ორგანიზატორებისთვის</a>
+                <a href="">ხშირად დასმული კითხვები</a>
+                <a href="">+995 32 219557</a>
+                <a href="">support</a>
+            </div>
+        </div>
+        <div class="navigations">
+            <div class="title" (click)="eventsOpen()">
+                <p>ღონისძიებები</p>
+                <i class="fa-solid fa-chevron-down arrow" [class.arrowRotate]="events"></i>
+            </div>
+            <div class="routes" [class.routes_active]="events">
+                <a href="">კონცერტები</a>
+                <a href="">თეატრი</a>
+                <a href="">ოპერა</a>
+                <a href="">სპორტი</a>
+                <a href="">სხვა</a>
+            </div>
+        </div>
+        <div class="navigations">
+            <div class="title" (click)="movieOpen()">
+                <p>კინო</p>
+                <i class="fa-solid fa-chevron-down arrow" [class.arrowRotate]="movie"></i>
+            </div>
+            <div class="routes" [class.routes_active]="movie">
+                <a href="">კინოთეატრი ამირანი</a>
+                <a href="">კავეა თბილისი მოლი</a>
+                <a href="">კავეა ისთ ფოინთი</a>
+                <a href="">კავეა გალერია</a>
+                <a href="">კავეა სითი მოლი</a>
+            </div>
+        </div>
+        <div class="navigations">
+            <div class="title" (click)="trainOpen()">
+                <p>მატარებელი</p>
+                <i class="fa-solid fa-chevron-down arrow " [class.arrowRotate]="train"></i>
+            </div>
+            <div class="routes" [class.routes_active]="train">
+                <a href="">თბილისი - ბათუმი</a>
+                <a href="">თბილისი - ფოთი</a>
+                <a href="">თბილისი - ქუთაისი</a>
+                <a href="">თბილისი - ურეკი</a>
+                <a href="">თბილისი - ოზურგეთი</a>
+            </div>
+        </div>
+        <div class="navigations">
+            <div class="title" (click)="flyghtOpen()">
+                <p>ფრენა</p>
+                <i class="fa-solid fa-chevron-down arrow" [class.arrowRotate]="flyght"></i>
+            </div>
+            <div class="routes" [class.routes_active]="flyght">
+                <a href="">თბილისი - სტამბოლი</a>
+                <a href="">თბილისი - ბერლინი</a>
+                <a href="">თბილისი - პარიზი</a>
+                <a href="">თბილისი - ბარსელონა</a>
+                <a href="">თბილისი - ბაქო</a>
+            </div>
+        </div>
+    </div>
+</div>
