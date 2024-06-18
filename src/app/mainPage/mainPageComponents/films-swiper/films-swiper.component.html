@@ -3,8 +3,9 @@
         <p>კინო</p>
     </div>
     <swiper-container
+    #swiper
     navigation="false"
-    slides-per-view="4"
+    [slidesPerView]="slidesPerView"
     loop="false"
     >
         <ng-container *ngFor="let tktGeMove of tktGeMoives">

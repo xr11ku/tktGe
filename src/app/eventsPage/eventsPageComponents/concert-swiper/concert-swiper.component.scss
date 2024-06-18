@@ -153,28 +153,199 @@
     }
 }
 
-@media screen and (max-width:1600px){
+@media screen and (max-width:1609px){
     .concerts_mainContainer{
         a{
             .card{
                 .image_card{
                     .img{
                         img{
-                            width: 240px;
-                            height: 110px;
+                            width: 320px;
+                            height: auto;
                         }
                     }
-                    .date_container{
-                        width: 240px;
-                        height: 110px;
-                    }
                     .price_container{
-                        width: 240px;
-                        height: 110px;
+                        width: 320px;
+                        height: 155px;
                     }
                     .soldOut_container{
-                        width: 240px;
-                        height: 110px;
+                        width: 320px;
+                        height: 155px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1510px){
+    .concerts_mainContainer{
+        a{
+            .card{
+                .image_card{
+                    .img{
+                        img{
+                            width: 300px;
+                            height: auto;
+                        }
+                    }
+                    .price_container{
+                        width: 300px;
+                        height: 155px;
+                    }
+                    .soldOut_container{
+                        width: 300px;
+                        height: 155px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1409px){
+    .concerts_mainContainer{
+        a{
+            .card{
+                .image_card{
+                    .img{
+                        img{
+                            width: 450px;
+                            height: auto;
+                        }
+                    }
+                    .price_container{
+                        width: 430px;
+                        height: 225px;
+                    }
+                    .soldOut_container{
+                        width: 430px;
+                        height: 215px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1382px){
+    .concerts_mainContainer{
+        a{
+            .card{
+                .image_card{
+                    .img{
+                        img{
+                            width: 420px;
+                            height: auto;
+                        }
+                    }
+                    .price_container{
+                        width: 420px;
+                        height: 205px;
+                    }
+                    .soldOut_container{
+                        width: 420px;
+                        height: 205px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1310px){
+    .concerts_mainContainer{
+        a{
+            .card{
+                .image_card{
+                    .img{
+                        img{
+                            width: 410px;
+                            height: auto;
+                        }
+                    }
+                    .price_container{
+                        width: 410px;
+                        height: 195px;
+                    }
+                    .soldOut_container{
+                        width: 410px;
+                        height: 195px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1250px){
+    .concerts_mainContainer{
+        a{
+            .card{
+                .image_card{
+                    .img{
+                        img{
+                            width: 350px;
+                            height: auto;
+                        }
+                    }
+                    .price_container{
+                        width: 350px;
+                        height: 185px;
+                    }
+                    .soldOut_container{
+                        width: 350px;
+                        height: 185px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1170px){
+    .concerts_mainContainer{
+        a{
+            .card{
+                .image_card{
+                    .img{
+                        img{
+                            width: 320px;
+                            height: auto;
+                        }
+                    }
+                    .price_container{
+                        width: 320px;
+                        height: 170px;
+                    }
+                    .soldOut_container{
+                        width: 320px;
+                        height: 170px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1100px){
+    .concerts_mainContainer{
+        a{
+            .card{
+                .image_card{
+                    .img{
+                        img{
+                            width: 98%;
+                            height: auto;
+                        }
+                    }
+                    .price_container{
+                        width: 98%;
+                        height: 75%;
+                    }
+                    .soldOut_container{
+                        width: 98%;
+                        height: 75%;
                     }
                 }
             }

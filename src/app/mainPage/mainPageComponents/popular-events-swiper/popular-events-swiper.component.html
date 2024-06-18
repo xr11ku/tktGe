@@ -3,47 +3,43 @@
         <p>პოპულარული ღონისძიებები</p>
     </div>
     <swiper-container
+    #swiper
     navigation="false"
-    slides-per-view="4"
+    [slidesPerView]="slidesPerView"
     loop="false">
-        <ng-container *ngFor="let tktTopEvent of tktTopEvents">
-            <swiper-slide class="swiper_slide">
-                <a href="details/{{tktTopEvent.eventId}}">
-                    <div class="card">
-                        <div class="image_card">
-                            <div class="date_container">
-                                <div class="date">
-                                    <span>05</span>
-                                    <span>ივლ</span>
-                                </div>
-                            </div>
-                            <div class="price_container" *ngIf="tktTopEvent.isSoldOut === false">
-                                <div class="price">
-                                    <p>{{tktTopEvent.minPrice}} ₾-დან</p>
-                                </div>
-                            </div>
-                            <div class="soldOut_container" *ngIf="tktTopEvent.isSoldOut === true">
-                                <div class="soldOut">
-                                    <p>გაყიდულია</p>
-                                </div>
-                            </div>
-                            <div class="soldOut_container" *ngIf="tktTopEvent.isSoldOut === true">
-                                <div class="soldOut">
-                                    <p>გაყიდულია</p>
-                                </div>
-                            </div>
-                            <div class="img">
-                                <img src="https://static.tkt.ge/img/{{tktTopEvent.imageName}}" alt="">
+    <ng-container *ngFor="let tktTopEvent of tktTopEvents">
+        <swiper-slide class="swiper_slide">
+            <a [routerLink]="['/details', tktTopEvent.eventId]">
+                <div class="card">
+                    <div class="image_card">
+                        <div class="date_container">
+                            <div class="date">
+                                <span>05</span>
+                                <span>ივლ</span>
                             </div>
                         </div>
-                        <div class="card_title">
-                            <span>{{tktTopEvent.eventName}}</span>
-                            <span>{{tktTopEvent.venueName}}</span>
-                            <span>{{tktTopEvent.eventDate | date}}</span>
+                        <div class="price_container" *ngIf="!tktTopEvent.isSoldOut">
+                            <div class="price">
+                                <p>{{tktTopEvent.minPrice}} ₾-დან</p>
+                            </div>
+                        </div>
+                        <div class="soldOut_container" *ngIf="tktTopEvent.isSoldOut">
+                            <div class="soldOut">
+                                <p>გაყიდულია</p>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img src="https://static.tkt.ge/img/{{tktTopEvent.imageName}}" alt="">
                         </div>
                     </div>
-                </a>
-            </swiper-slide>
-        </ng-container>
-    </swiper-container>
+                    <div class="card_title">
+                        <span>{{tktTopEvent.eventName}}</span>
+                        <span>{{tktTopEvent.venueName}}</span>
+                        <span>{{tktTopEvent.eventDate | date}}</span>
+                    </div>
+                </div>
+            </a>
+        </swiper-slide>
+    </ng-container>
+</swiper-container>
 </div>

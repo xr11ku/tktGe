@@ -178,7 +178,7 @@ header{
     z-index: 5001 !important;
     .resp_menu{
         background-color: white;
-        width: 270px;
+        width: 360px !important;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -220,6 +220,12 @@ header{
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
+                    .Search_Loop{
+                        width: 240px;
+                    }
+                    .textClear{
+                        display: none;
+                    }
                     input{
                         height: 25px;
                         width: 210px;
@@ -231,6 +237,40 @@ header{
                     }                
                     .searchIcon{
                         font-size: 13px;
+                    }
+                }
+                .search_active{
+                    width: auto;
+                    background-color: white;
+                    display: flex;
+                    gap: 5px;
+                    .search_input{
+                        width: 170px;
+                        border-radius: 10px;
+                        padding-right: 10px;
+                        display: flex;
+                        align-items: center;
+                        background-color: #ebedff;
+                        .Search_Loop{
+                            border-radius: 10px;
+                            padding-left: 10px;
+                            display: flex;
+                            flex-direction: row-reverse;
+                        }
+                        input{
+                            width: 130px;
+                            border-radius: 10px;
+                        }
+                        .textClear{
+                            display: block;
+                        }
+                        .textClear{
+                            background-color: black;
+                            padding: 2.5px 5px;
+                            border-radius: 50%;
+                            color: white;
+                            font-size: 8px;
+                        }
                     }
                 }
             }
@@ -285,6 +325,91 @@ header{
                         }
                         .eventMenuActive{
                             display: flex;
+                        }
+                    }
+                }
+            }
+            .searchedEvents{
+                width: 100%;
+                height: 90vh;
+                overflow-y: scroll;
+                padding: 0px 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .searched{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .searchedCards{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        .cards{
+                            display: flex;
+                            gap: 5px;
+                            .image{
+                                img{
+                                    width: 80px;
+                                    height: auto;
+                                }
+                            }
+                        }
+                        .texts{
+                            display: flex;
+                            flex-direction: column;
+                            span{
+                                color: black;
+                            }
+                            span:nth-child(1){
+                                font-size: 10px;
+                            }
+                            span:nth-child(2){
+                                font-size: 8px;
+                            }
+                            span:nth-child(3){
+                                font-size: 8px;
+                            }
+                        }
+                    }
+                }
+                .popularEvents{
+                    .title{
+                        p{
+                            font-size: 13px;
+                        }
+                    }
+                    .events{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        a{
+                            .cards{
+                                display: flex;
+                                gap: 5px;
+                                .image{
+                                    img{
+                                        width: 80px;
+                                        height: auto;
+                                    }
+                                }
+                                .texts{
+                                    display: flex;
+                                    flex-direction: column;
+                                    span{
+                                        color: black;
+                                    }
+                                    span:nth-child(1){
+                                        font-size: 10px;
+                                    }
+                                    span:nth-child(2){
+                                        font-size: 8px;
+                                    }
+                                    span:nth-child(3){
+                                        font-size: 8px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

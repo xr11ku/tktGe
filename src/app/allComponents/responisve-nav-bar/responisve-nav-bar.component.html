@@ -51,12 +51,61 @@
                 <p>English</p>
             </div>
             <div class="search">
-                <div class="input">
-                    <input type="text" placeholder="ძებნა..." >
-                    <i class="fa-solid fa-magnifying-glass searchIcon"></i>
+                <div class="input"  [class.search_active]="searchActive">
+                    <div class="search_input">
+                        <div class="Search_Loop">
+                            <input type="text" placeholder="ძებნა..." (click)="searchOpen()" [(ngModel)]="eventSearch">
+                            <span (click)="search()">
+                                <i class="fa-solid fa-magnifying-glass searchIcon"></i>
+                            </span>
+                        </div>
+                        <span (click)="searchClearClick()" class="textClear">
+                            X
+                        </span>
+                    </div>
+                    <span (click)="searchClose()" *ngIf="searchActive === true" class="goMenu">დახურვა</span>
+                 </div>
+            </div>
+            <div class="searchedEvents" *ngIf="searchActive === true">
+                <div class="searched">
+                    <ng-container *ngFor="let searchedResult of searchedItems">
+                        <div class="searchedCards">
+                            <div class="cards">
+                                <div class="image">
+                                    <img [src]="searchedResult.Poster" alt="">
+                                </div>
+                                <div class="texts">
+                                    <span>{{searchedResult.ShowName}}</span>
+                                    <span>{{searchedResult.EventDate | date}}</span>
+                                    <span>{{searchedResult.VenueName}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="popularEvents" *ngIf="searchActive === true">
+                    <div class="title">
+                        <p>პოპულარული ღონისძიებები</p>
+                    </div>
+                    <div class="events">
+                        <ng-container *ngFor="let popularEvent of popularEvent">
+                            <a href="/concert">
+                                <div class="cards">
+                                    <div class="image">
+                                        <img src="https://static.tkt.ge/img/{{popularEvent.imageName}}" alt="">
+                                    </div>
+                                    <div class="texts">
+                                        <span class="test">{{popularEvent.eventName}}</span>
+                                        <span>{{popularEvent.eventDate | date}}</span>
+                                        <span>{{popularEvent.venueName}}</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </ng-container>
+                    </div>
                 </div>
             </div>
-            <div class="insideMenu_container">
+            <div class="insideMenu_container" *ngIf="searchActive === false">
                 <div class="insideMenu">
                     <div class="Menu">
                         <a routerLink="" ><i class="fa-solid fa-house-chimney"></i>მთავარი</a>
@@ -79,7 +128,7 @@
                 </div>
             </div>
         </div>
-        <div class="bottom_menu">
+        <div class="bottom_menu" *ngIf="searchActive === false">
             <div class="aditonal_routes">
                 <a href="">ბლოგო</a>
                 <a href="">ორგანიზაოტრებისთვის</a>

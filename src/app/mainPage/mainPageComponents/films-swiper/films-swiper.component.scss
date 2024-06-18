@@ -79,3 +79,38 @@
         }
     }
 }
+
+
+@media screen and (max-width:1730px){
+    .films_mainContainer{
+        a{
+            .card{
+                .image_card{
+                    .img{
+                        img{
+                            width: 300px;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1629px){
+    .films_mainContainer{
+        a{
+            .card{
+                .image_card{
+                    .img{
+                        img{
+                            width: 98% !important;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

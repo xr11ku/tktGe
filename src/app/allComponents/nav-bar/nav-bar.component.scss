@@ -61,7 +61,7 @@ header{
                 }
                 .searchedEvents{
                     width: 380px;
-                    height: 250px;
+                    height: 280px;
                     overflow-y: scroll;
                     background-color: rgb(255, 255, 255);
                     padding: 15px 20px;
@@ -71,13 +71,39 @@ header{
                     box-shadow: 0px 0px 30px 1px rgba(128, 128, 128, 0.267);
                     display: none;
                     flex-direction: column;
+                    gap: 20px;
                     .searchedEvents_container{
                         width: 350px;
-                        height: 400px;
-                        background-color: aqua;
-                        img{
+                        height: auto;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        .cards{
                             width: 100%;
-                            height: 200px;
+                            height: auto;
+                            display: flex;
+                            gap: 10px;
+                            .image{
+                                img{
+                                    width: 120px;
+                                    border-radius: 5px;
+                                }
+                            }
+                            .texts{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                color: black;
+                                span:nth-child(1){
+                                    font-size: 12px;
+                                }
+                                span:nth-child(2){
+                                    font-size: 9px;
+                                }
+                                span:nth-child(3){
+                                    font-size: 10px;
+                                }
+                            }
                         }
                     }
                     .popularEvents{

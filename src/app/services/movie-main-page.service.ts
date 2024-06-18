@@ -10,12 +10,16 @@ export class MovieMainPageService {
 
   twoImageApi:string = "http://localhost:3000/proxy?targetUrl=https://gateway.tkt.ge/v2/movies/popular?api_key=7d8d34d1-e9af-4897-9f0f-5c36c179be77"
   currentMoviesApi:string = "http://localhost:3000/proxy?targetUrl=https://gateway.tkt.ge/v2/movies/list?api_key=7d8d34d1-e9af-4897-9f0f-5c36c179be77"
-  
+  cinemaAmirani:string = "http://localhost:3000/proxy?targetUrl=https://gateway.tkt.ge/v2/movies/list?session=None&venueId=17&api_key=7d8d34d1-e9af-4897-9f0f-5c36c179be77"
   getTwoImage(){
      return this._http.get<IRootMovieMainPageTwoPhoto>(this.twoImageApi)
   }
 
   getCurrentMovies(){
     return this._http.get<IRootCurrentMovieMainPage>(this.currentMoviesApi)
+  }
+
+  getCinemaAmirani(){
+    return this._http.get<IRootMovieMainPageTwoPhoto>(this.cinemaAmirani)
   }
 }

@@ -3,8 +3,9 @@
         <p>კონცერტები</p>
     </div>
     <swiper-container
+    #swiper
     navigation="false"
-    slides-per-view="4"
+    [slidesPerView]="slidesPerView"
     loop="false">
         <ng-container *ngFor="let tktConcert of tktConcerts">
             <swiper-slide class="swiper_slide">

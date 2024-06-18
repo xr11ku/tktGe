@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,HostListener , ViewChild} from '@angular/core';
 import { ConcertEventService } from '../../../services/concert-event.service';
 import { IShow } from '../../../interfaces/tktGeConcert.model';
 @Component({
@@ -7,6 +7,8 @@ import { IShow } from '../../../interfaces/tktGeConcert.model';
   styleUrl: './concert-swiper.component.scss'
 })
 export class ConcertSwiperComponent {
+  @ViewChild('swiper') swiper: any;
+  slidesPerView: number = 4;
 
   tktConcerts:IShow[] = []
 
@@ -20,6 +22,32 @@ export class ConcertSwiperComponent {
           this.tktConcerts = data.data.shows
         }
       }
+      this.updateSlidesPerView(window.innerWidth);
     })
+  }
+
+  ngAfterViewInit() {
+    this.updateSlidesPerView(window.innerWidth); // Initial check
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    const target = event.target as Window;
+    this.updateSlidesPerView(target.innerWidth);
+  }
+
+  updateSlidesPerView(width: number) {
+    if (width >= 1610) {
+      this.slidesPerView = 4;
+    } else if (width >= 1410) {
+      this.slidesPerView = 3;
+    } else if (width >= 550) {
+      this.slidesPerView = 2;
+    } else {
+      this.slidesPerView = 1
+    }
+    if (this.swiper && this.swiper.swiperRef) {
+      this.swiper.swiperRef.update(); // Re-initialize Swiper
+    }
   }
 }

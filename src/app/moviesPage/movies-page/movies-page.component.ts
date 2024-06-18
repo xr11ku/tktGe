@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,output ,EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-movies-page',
@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class MoviesPageComponent {
 
+  
 }

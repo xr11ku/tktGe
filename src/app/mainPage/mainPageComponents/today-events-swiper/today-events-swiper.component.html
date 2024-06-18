@@ -3,8 +3,9 @@
         <p>დღევანდელი ღონისძიებები</p>
     </div>
     <swiper-container
+    #swiper
     navigation="false"
-    slides-per-view="4"
+    [slidesPerView]="slidesPerView"
     loop="false">
         <ng-container *ngFor="let tktTodayEvent of tktTodaEvents">
             <swiper-slide class="swiper_slide">

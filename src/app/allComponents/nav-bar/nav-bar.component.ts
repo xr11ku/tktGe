@@ -47,9 +47,6 @@ export class NavBarComponent {
         ? popularEvents.data.slice(0, 4) 
         : popularEvents.data;
     })
-    this._searchService.getSearchItems("rag").subscribe((data) => {
-      console.log(data)
-    })
     this.routerSubscription = this.route.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.filmsPageClickActive();

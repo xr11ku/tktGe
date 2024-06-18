@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, EventEmitter } from '@angular/core';
+import { Output } from '@angular/core';
 @Component({
   selector: 'app-movie-left-side-menu',
   templateUrl: './movie-left-side-menu.component.html',
@@ -14,6 +14,7 @@ export class MovieLeftSideMenuComponent {
   caveaCityMall:boolean = false;
   apoloBatuimi:boolean = false;
 
+  @Output() cinemaAmiraniShow = new EventEmitter<boolean>()
   allCinemaShow(){
     this.allCinema = true;
     this.cinemaAmiran = false;
