@@ -1,27 +1,16 @@
-# TktGE
+If you want to view this project you will need to download and run a proxy server 
+You will need the following command to run the proxy server 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+First of all, you need to download the proxy server code, the link of which you will see below
 
-## Development server
+Proxy server download link: https://github.com/Lashvardi/small-proxy-server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Then you need to run the terminal to install the modules and then start the proxy server itself
 
-## Code scaffolding
+npm i -> to download modules 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+npm run dev -> to open proxy server 
 
-## Build
+After all this you will be able to see my work 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Attention This project is made only for educational purposes and does not serve anything else. Thank you for your attention !
